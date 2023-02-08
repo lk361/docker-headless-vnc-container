@@ -3,7 +3,7 @@
 set -e
 
 
-RUN echo 'deb https://mirrors.tuna.tsinghua.edu.cn/debian/ sid main contrib non-free'> /etc/apt/sources.list
+echo 'deb https://mirrors.tuna.tsinghua.edu.cn/debian/ sid main contrib non-free'> /etc/apt/sources.list
 
 export http_proxy=http://192.168.4.1:7890
 export https_proxy=http://192.168.4.1:7890
