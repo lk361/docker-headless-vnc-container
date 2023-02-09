@@ -66,7 +66,7 @@ RUN apt clean -y
 
 ADD src/apache-jmeter-5.5.tar.gz ./
 
-USER 1000
+USER 0
 
 ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]
 CMD ["--wait"]
