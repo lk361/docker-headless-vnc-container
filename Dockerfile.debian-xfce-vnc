@@ -64,7 +64,7 @@ RUN apt install openjdk-11-jdk -y
 RUN apt upgrade -y
 RUN apt clean -y
 
-ADD apache-jmeter-5.5.tar.gz ./
+ADD src/apache-jmeter-5.5.tar.gz ./
 
 USER 1000
 
