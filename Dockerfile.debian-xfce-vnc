@@ -33,7 +33,6 @@ ENV HOME=/headless \
     VNC_PW=vncpassword \
     VNC_VIEW_ONLY=false
 WORKDIR $HOME
-ADD apache-jmeter-5.5.tar.gz ./
 ### Add all install scripts for further steps
 ADD ./src/common/install/ $INST_SCRIPTS/
 ADD ./src/debian/install/ $INST_SCRIPTS/
@@ -64,6 +63,8 @@ RUN $INST_SCRIPTS/set_user_permission.sh $STARTUPDIR $HOME
 RUN apt install openjdk-11-jdk -y
 RUN apt upgrade -y
 RUN apt clean -y
+
+ADD apache-jmeter-5.5.tar.gz ./
 
 USER 1000
 
