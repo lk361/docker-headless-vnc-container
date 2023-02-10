@@ -65,6 +65,7 @@ RUN apt upgrade -y
 RUN apt clean -y
 
 ADD src/apache-jmeter-5.5.tar.gz ./
+ADD src/kingbase-test.tar.gz ./
 
 USER 0
 
